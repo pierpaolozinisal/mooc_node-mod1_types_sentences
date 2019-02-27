@@ -87,7 +87,7 @@ describe("mooc_node-mod1_types_sentences", function () {
                 this.msg_err = `Error running the file.\n\t\t\tReceived: ${error_exe}`;
                 error_critical = this.msg_err;
             } else {
-                output = output.split('', async function () { this.name = /\r?\n\r?\n/}); // }
+               output = output.split(/\r?\n\r?\n/);
             }
             should.not.exist(error_exe);
         }
